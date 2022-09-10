@@ -78,7 +78,7 @@ public class CustomRefreshFilter {
         String fingerprintCookie =  userFingerprint;
         Cookie cookie = new Cookie("__Secure-Fgp",fingerprintCookie);
         cookie.setHttpOnly(true);
-        cookie.setPath("/api");
+        cookie.setPath("/");
         response.addCookie(cookie);
         MessageDigest digest;
         try {
