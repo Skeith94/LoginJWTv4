@@ -68,6 +68,7 @@ public class CustomAuthenticationFilter extends AbstractAuthenticationProcessing
         String fingerprintCookie = userFingerprint;
         Cookie cookie = new Cookie("__Secure-Fgp", fingerprintCookie);
         cookie.setHttpOnly(true);
+        cookie.setPath("/");
         response.addCookie(cookie);
         MessageDigest digest;
         try {
